@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "yue-music": {
@@ -47,7 +47,12 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "src/styles.less"
@@ -145,6 +150,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "yue-music"
+    }
+  },
+  "defaultProject": "yue-music",
+  "cli": {
+    "analytics": "72bcfd22-6039-4265-86f4-50a972ddceee"
+  }
 }
