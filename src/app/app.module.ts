@@ -20,6 +20,7 @@ registerLocaleData(zh);
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
   ],

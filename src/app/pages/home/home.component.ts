@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Banner} from '../../types/common';
+import {Banner, PlayList, PlayListTag} from '../../types/common';
 import {HomeService} from '../../services/home.service';
 
 @Component({
@@ -9,6 +9,8 @@ import {HomeService} from '../../services/home.service';
 })
 export class HomeComponent implements OnInit {
   banners: Banner[];
+  playLists: PlayList[];
+  tags: PlayListTag[];
 
   constructor(
     private service: HomeService
@@ -16,11 +18,25 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBanners();
+    this.getTopPlayList();
+    this.getHotPlayListTag();
   }
 
   getBanners() {
     this.service.getBanners().subscribe(banners => {
       this.banners = banners;
+    });
+  }
+
+  getTopPlayList() {
+    this.service.getTopPlayList().subscribe(playLists => {
+      this.playLists = playLists;
+    });
+  }
+
+  getHotPlayListTag() {
+    this.service.getHotTags().subscribe(tags => {
+      this.tags = tags;
     });
   }
 

@@ -1,0 +1,29 @@
+<div class="play-list">
+  <div class="header">
+    <span class="title">热门推荐</span>
+    <ul class="tags">
+      <li *ngFor="let tag of tags">
+        <a href="">{{tag.name}}</a>
+      </li>
+    </ul>
+    <div class="right">
+      <a href="" >更多</a>
+      <i nz-icon nzType="arrow-right" nzTheme="outline"></i>
+    </div>
+  </div>
+  <ul class="list">
+    <li *ngFor="let play of playList">
+      <div class="img-c">
+        <img [src]="play.coverImgUrl" alt="" />
+        <div >
+          {{play.playCount | playCount}}
+          <i nz-icon nzType="play-circle" nzTheme="outline" class="right"></i>
+        </div>
+      </div>
+      <div class="title">
+        {{play.name}}
+      </div>
+    </li>
+  </ul>
+</div>
+

@@ -6,20 +6,21 @@ import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { PlayCountPipe } from './pip/play-count.pipe';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [PlayCountPipe],
   imports: [
 
   ],
   exports: [
     CommonModule,
-    NgZorroAntdModule,
     FormsModule,
     HttpClientModule,
-
+    NgZorroAntdModule,
+    PlayCountPipe,
   ]
 })
 export class ShareModule { }
