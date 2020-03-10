@@ -1,0 +1,43 @@
+@height: 60px;
+.header {
+  height: @height;
+  background-color: #002140;
+  color: white;
+  font-size: 14px;
+  padding: 0 10px;
+  .title {
+    font-size: 20px;
+    line-height: @height;
+    margin-right: 20px;
+  }
+  .menu {
+    line-height: @height;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display:inline-block;
+  }
+  .menu li {
+    margin: 0 20px;
+    display:inline-block;
+  }
+  .right {
+    width: 600px;
+    float: right;
+    text-align: right;
+    .input {
+      width: 300px;
+      line-height: @height;
+    }
+    .txt {
+      padding: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}

@@ -1,9 +1,23 @@
 <div class="header">
-  header
+  <span class="title">悦乐</span>
+  <ul class="menu">
+    <li>歌单</li>
+    <li>排行榜</li>
+    <li>歌手</li>
+  </ul>
+  <div class="right">
+    <nz-input-group class="input" [nzSuffix]="suffixIconSearch" [nzSearch]="true">
+      <input type="text" nz-input placeholder="歌曲/歌手/歌词" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+      <i nz-icon nzType="search"></i>
+    </ng-template>
+    <span class="txt">登录</span>
+  </div>
 </div>
 <div class="content">
   <router-outlet></router-outlet>
 </div>
 <div class="footer">
-  footer
+  CopyRight &copy; 2020 Power By Bomqi.com
 </div>

@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import {PagesModule} from './pages/pages.module';
+import {ServicesModule} from './services/services.module';
 
 registerLocaleData(zh);
 
@@ -19,10 +21,7 @@ registerLocaleData(zh);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgZorroAntdModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
