@@ -1,0 +1,23 @@
+<div class="song-list">
+  <div class="header">
+    <span class="title">热歌榜</span>
+    <div class="right">
+      <a href="" >查看全部 ></a>
+    </div>
+  </div>
+  <ul class="list">
+    <li *ngFor="let song of list">
+      <img [src]="song.al.picUrl" [alt]="song.al.name" />
+      <div class="content">
+        <div class="title">
+          <span>{{song.name}}</span>&nbsp;
+          <span class="alia">{{song.alia}}</span>
+        </div>
+        <div class="ar">
+          <span *ngFor="let ar of song.ar">{{ar.name }}&nbsp;&nbsp;</span>
+          <span class="dt">{{song.dt | songTime}}</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

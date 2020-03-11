@@ -7,20 +7,22 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PlayCountPipe } from './pip/play-count.pipe';
+import { SongTimePipe } from './pip/song-time.pipe';
 
 
 
 @NgModule({
-  declarations: [PlayCountPipe],
+  declarations: [PlayCountPipe, SongTimePipe],
   imports: [
 
   ],
-  exports: [
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    NgZorroAntdModule,
-    PlayCountPipe,
-  ]
+    exports: [
+        CommonModule,
+        FormsModule,
+        HttpClientModule,
+        NgZorroAntdModule,
+        PlayCountPipe,
+        SongTimePipe,
+    ]
 })
 export class ShareModule { }

@@ -1,2 +1,7 @@
 <app-carousel [banners]="banners"></app-carousel>
-<app-hot-play-list [playList]="playLists" [tags]="tags"></app-hot-play-list>
+<div class="left">
+  <app-hot-play-list [playList]="playLists" [tags]="tags"></app-hot-play-list>
+</div>
+<div class="right">
+  <app-hot-song-list [list]="songList"></app-hot-song-list>
+</div>

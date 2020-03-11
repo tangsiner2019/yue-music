@@ -20,3 +20,22 @@ export interface PlayListTag {
   name: string;
   position: number;
 }
+
+// 歌曲
+export interface Song {
+  id: number;
+  dt: number; // 时长
+  name: string;
+  alia: string;
+  ar: [ // 歌手
+    {
+      id: number;
+      name: string;
+    }
+  ];
+  al: {
+    id: number;
+    name: string;
+    picUrl: string;
+  };
+}
