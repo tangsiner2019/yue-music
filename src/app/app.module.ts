@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import {PlayerModule} from './player/player.module';
 
 registerLocaleData(zh);
 
@@ -20,6 +21,7 @@ registerLocaleData(zh);
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    PlayerModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

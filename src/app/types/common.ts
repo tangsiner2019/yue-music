@@ -43,6 +43,7 @@ export interface Album {
 export interface Song {
   id: number;
   name: string;
+  isPlay?: boolean;
   dt?: number; // 时长
   duration?: number;
   alia?: string;

@@ -1,0 +1,74 @@
+<nz-affix nzOffsetBottom="0" class="player">
+  <div class="slider">
+    <nz-slider style="color: red; background-color: orchid"  #slider [(ngModel)]="sliderValue"
+               [nzTipFormatter]="null"
+               (nzOnAfterChange)="onAfterChange($event)"
+               [nzDisabled]="sliderDisabled"></nz-slider>
+  </div>
+  <div class="control">
+    <div nz-col nzSpan="8" class="play_info">
+      <img src="../../assets/timg.jpeg"  alt=""  />
+      <div class="text">
+        <span class="title">{{song.name}}</span><span class="artist"> - {{song.name}}</span><br/>
+        <span class="timer">{{currentTime | songTime}} / {{ duration | songTime}}</span>
+      </div>
+    </div>
+    <div nz-col nzSpan="8" class="play_btn">
+      <audio src="../../assets/txmy.mp3" #audio></audio>
+      <button class="btn btn2"
+              (click)="pre()"
+              nz-button nzType="primary" nzShape="circle">
+        <i nz-icon nzType="heart" nzTheme="outline"></i>
+      </button>
+
+      <button class="btn"
+              (click)="pre()"
+              nz-button nzType="primary" nzShape="circle">
+        <i nz-icon nzType="step-backward" nzTheme="outline"></i>
+      </button>
+      <button class="btn"
+              (click)="play()"
+              nz-button nzType="primary" nzShape="circle">
+        <i nz-icon [nzType]="playIcon" nzTheme="outline"></i>
+      </button>
+      <button class="btn"
+              (click)="next()"
+              nz-button nzType="primary" nzShape="circle">
+        <i nz-icon nzType="step-forward" nzTheme="outline"></i>
+      </button>
+      <button class="btn btn2"
+              (click)="next()"
+              nz-button nzType="primary" nzShape="circle">
+        <i nz-icon nzType="share-alt" nzTheme="outline"></i>
+      </button>
+    </div>
+    <div nz-col nzSpan="8" class="play_menu">
+      <button class="btn3"
+              (click)="pre()"
+              nz-button nzType="primary" nzShape="circle">
+        <i nz-icon nzType="retweet" nzTheme="outline"></i>
+      </button>
+
+      <button class="btn3"
+              (click)="pre()"
+              nz-button nzType="primary" nzShape="circle">
+        <i nz-icon nzType="unordered-list" nzTheme="outline"></i>
+      </button>
+      <button class="btn3"
+              (click)="play()"
+              nz-button nzType="primary" nzShape="circle">
+        <i nz-icon nzType="file-word" nzTheme="outline"></i>
+      </button>
+      <button class="btn3"
+              (click)="play()"
+              nz-button nzType="primary" nzShape="circle">
+        <i nz-icon nzType="edit" nzTheme="outline"></i>
+      </button>
+      <button class="btn3"
+              (click)="next()"
+              nz-button nzType="primary" nzShape="circle">
+        <i nz-icon nzType="sound" nzTheme="outline"></i>
+      </button>
+    </div>
+  </div>
+</nz-affix>
