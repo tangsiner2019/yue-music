@@ -1,0 +1,22 @@
+<div class="song-list">
+  <div class="header">
+    <span class="title">热门歌手</span>
+    <div class="right">
+      <a href="" >查看全部 ></a>
+    </div>
+  </div>
+  <ul class="list">
+    <li *ngFor="let artist of list">
+      <img [src]="artist.picUrl" [alt]="artist.name" />
+      <div class="content">
+        <div class="title">
+          <span>{{artist.name}}</span>&nbsp;
+        </div>
+        <div class="ar">
+          <span >歌曲：{{artist.musicSize }}&nbsp;&nbsp;</span>
+          <span class="dt">专辑：{{artist.albumSize}}</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

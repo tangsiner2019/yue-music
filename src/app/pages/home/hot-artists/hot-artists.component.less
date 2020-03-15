@@ -1,0 +1,70 @@
+@color: gray;
+
+.song-list {
+  width: 100%;
+  border-right: #eee solid 1px;
+  border-top: #eee solid 1px;
+  .header {
+    line-height: 40px;
+    padding: 0 5px;
+    margin: 0 20px;
+    height: 40px;
+    border-bottom: @color solid 2px;
+
+    .title {
+      font-size: 14px;
+      font-weight: bold;
+      float: left;
+      color: @color;
+    }
+
+    .right {
+      display: inline-block;
+      float: right;
+      color: @color;
+
+      a {
+        color: @color;
+      }
+    }
+  }
+
+  .list {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    li {
+      margin: 0 20px 20px;
+      display: inline-block;
+      width: 100%;
+      vertical-align:top;
+      img {
+        width: 60px;
+        height: 60px;
+        float: left;
+      }
+      .content {
+        margin-left: 10px;
+        float: left;
+        line-height: 30px;
+        width: 256px;
+        .title {
+          font-weight: bold;
+          height: 30px;
+          overflow: hidden; /*隐藏超出单元格的部分*/
+          text-overflow: ellipsis; /*将被隐藏的那部分用省略号代替*/
+          .alia {
+            font-weight: normal;
+            color: darkgrey;
+          }
+        }
+
+        .dt {
+          float: right;
+        }
+      }
+    }
+
+  }
+}
+

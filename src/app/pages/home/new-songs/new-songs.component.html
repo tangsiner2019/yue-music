@@ -1,0 +1,22 @@
+<div class="song-list">
+  <div class="header">
+    <span class="title">新歌速递</span>
+    <div class="right">
+      <a href="" >查看全部 ></a>
+    </div>
+  </div>
+  <ul class="list">
+    <li *ngFor="let song of list">
+      <img [src]="song.album.picUrl" [alt]="song.album.name" />
+      <div class="content">
+        <div class="title">
+          <span>{{song.name}}</span>&nbsp;
+        </div>
+        <div class="ar">
+          <span *ngFor="let ar of song.artists">{{ar.name }}&nbsp;&nbsp;</span>
+          <span class="dt">{{song.duration | songTime}}</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

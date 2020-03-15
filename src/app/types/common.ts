@@ -21,21 +21,37 @@ export interface PlayListTag {
   position: number;
 }
 
+// 歌手
+export interface Artist {
+  id: number;
+  name: string;
+  picUrl?: string;
+  albumSize?: number;
+  musicSize?: number;
+}
+
+// 专辑
+export interface Album {
+  id: number;
+  name: string;
+  picUrl?: string;
+  artist?: Artist;
+  size?: number;
+}
+
 // 歌曲
 export interface Song {
   id: number;
-  dt: number; // 时长
   name: string;
-  alia: string;
-  ar: [ // 歌手
-    {
-      id: number;
-      name: string;
-    }
+  dt?: number; // 时长
+  duration?: number;
+  alia?: string;
+  ar?: [ // 歌手
+    Artist
   ];
-  al: {
-    id: number;
-    name: string;
-    picUrl: string;
-  };
+  artists?: [
+    Artist
+  ];
+  al?: Album; // 专辑
+  album?: Album;
 }

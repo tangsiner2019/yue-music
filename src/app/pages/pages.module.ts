@@ -8,10 +8,12 @@ import {HomeComponent} from './home/home.component';
 import {ServicesModule} from '../services/services.module';
 import { HotPlayListComponent } from './home/hot-play-list/hot-play-list.component';
 import { HotSongListComponent } from './home/hot-song-list/hot-song-list.component';
+import { HotArtistsComponent } from './home/hot-artists/hot-artists.component';
+import { NewSongsComponent } from './home/new-songs/new-songs.component';
 
 
 @NgModule({
-  declarations: [PagesComponent, HomeComponent, CarouselComponent, HotPlayListComponent, HotSongListComponent],
+  declarations: [PagesComponent, HomeComponent, CarouselComponent, HotPlayListComponent, HotSongListComponent, HotArtistsComponent, NewSongsComponent],
   imports: [
     ShareModule,
     ServicesModule,
